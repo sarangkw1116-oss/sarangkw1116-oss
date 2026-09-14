@@ -38,7 +38,7 @@ screening concept.
 
 <a href="https://github.com/vahnivesh/Trinetra-BareMetal">
   <img
-    src="./assets/trinetra.svg"
+    src="./assets/project1.svg"
     width="100%"
     alt="Trinetra — an animated shared sensor core connected to a robot, handheld device, and fixed monitoring node."
   />
