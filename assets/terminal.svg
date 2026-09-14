@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1000" height="340" viewBox="0 0 1000 340"
+     role="img" aria-labelledby="title desc">
+
+  <title id="title">Vahnivesh — developer terminal</title>
+  <desc id="desc">
+    An animated terminal introducing Vahnivesh S Shine,
+    programmer and member of Team BareMetal.
+    Featured projects are Trinetra and 6sense.
+  </desc>
+
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#18212f"/>
+      <stop offset="1" stop-color="#101722"/>
+    </linearGradient>
+
+    <clipPath id="window">
+      <rect x="1" y="1" width="998" height="338" rx="16"/>
+    </clipPath>
+
+    <clipPath id="command-reveal">
+      <rect x="66" y="87" width="850" height="28">
+        <animate attributeName="width"
+                 values="0;0;850;850"
+                 keyTimes="0;0.06;0.22;1"
+                 dur="14s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
+  </defs>
+
+  <rect x="1" y="1" width="998" height="338" rx="16"
+        fill="url(#panel)" stroke="#344155" stroke-width="2"/>
+
+  <g clip-path="url(#window)">
+    <rect x="1" y="1" width="998" height="49" fill="#202a39"/>
+    <path d="M1 50H999" stroke="#344155"/>
+  </g>
+
+  <!-- Window controls -->
+  <circle cx="27" cy="25" r="5.5" fill="#db8985"/>
+  <circle cx="47" cy="25" r="5.5" fill="#ddbd79"/>
+  <circle cx="67" cy="25" r="5.5" fill="#8bb7a0"/>
+
+  <g font-family="'SFMono-Regular', Consolas, 'Liberation Mono', monospace">
+    <text x="500" y="30" text-anchor="middle"
+          fill="#a8b5c7" font-size="12">
+      vahnivesh — workspace
+    </text>
+
+    <text x="967" y="30" text-anchor="end"
+          fill="#8291a7" font-size="11">
+      ~/profile
+    </text>
+
+    <!-- Animated command -->
+    <text x="30" y="109" fill="#93c5fd" font-size="20">❯</text>
+
+    <g clip-path="url(#command-reveal)">
+      <text x="66" y="109" fill="#e2e8f0" font-size="19">
+        ./introduce --name vahnivesh
+      </text>
+    </g>
+
+    <!-- Output appears after the command -->
+    <g>
+      <animate attributeName="opacity"
+               values="0;0;1;1"
+               keyTimes="0;0.23;0.27;1"
+               dur="14s" repeatCount="indefinite"/>
+
+      <text x="66" y="156" fill="#f1f5f9"
+            font-size="27" font-weight="700">
+        Vahnivesh S Shine
+      </text>
+
+      <text x="66" y="185" fill="#a8b5c7" font-size="15">
+        Programmer · Builder · Team BareMetal
+      </text>
+    </g>
+
+    <!-- Project output -->
+    <g>
+      <animate attributeName="opacity"
+               values="0;0;1;1"
+               keyTimes="0;0.34;0.39;1"
+               dur="14s" repeatCount="indefinite"/>
+
+      <text x="66" y="232" fill="#8291a7" font-size="15">
+        selected projects
+      </text>
+
+      <text x="268" y="232" fill="#93c5fd" font-size="15">
+        Trinetra
+      </text>
+
+      <text x="372" y="232" fill="#64748b" font-size="15">/</text>
+
+      <text x="402" y="232" fill="#c4b5fd" font-size="15">
+        6sense
+      </text>
+    </g>
+
+    <!-- Ready prompt -->
+    <g>
+      <animate attributeName="opacity"
+               values="0;0;1;1"
+               keyTimes="0;0.45;0.49;1"
+               dur="14s" repeatCount="indefinite"/>
+
+      <text x="30" y="287" fill="#93c5fd" font-size="20">❯</text>
+
+      <text x="66" y="287" fill="#a8b5c7" font-size="16">
+        ready to build
+      </text>
+
+      <rect x="218" y="272" width="9" height="19" rx="1"
+            fill="#93c5fd">
+        <animate attributeName="opacity"
+                 values="1;0;1"
+                 keyTimes="0;0.5;1"
+                 dur="1.2s"
+                 calcMode="discrete"
+                 repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <text x="965" y="315" text-anchor="end"
+          fill="#718096" font-size="11">
+      CODE / CREATE / ITERATE
+    </text>
+  </g>
+</svg>
