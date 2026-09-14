@@ -1,154 +1,200 @@
 <svg xmlns="http://www.w3.org/2000/svg"
      width="1000" height="300" viewBox="0 0 1000 300"
-     role="img" aria-labelledby="title desc">
+     role="img" aria-labelledby="title description">
+
   <title id="title">Trinetra — Team BareMetal</title>
-  <desc id="desc">
-    An animated concept graphic showing a shared sensor core
-    connected to a robot, handheld device, and fixed node.
+  <desc id="description">
+    An animated Neo-Brutalist banner for Trinetra.
+    A shared sensor core connects to a mobile robot,
+    fixed node, and handheld device.
+    A railway screening concept by Team BareMetal.
   </desc>
 
   <defs>
-    <linearGradient id="background" x2="1" y2="1">
-      <stop stop-color="#192332"/>
-      <stop offset="1" stop-color="#101722"/>
-    </linearGradient>
-    <radialGradient id="halo">
-      <stop stop-color="#7dd3fc" stop-opacity=".14"/>
-      <stop offset="1" stop-color="#7dd3fc" stop-opacity="0"/>
-    </radialGradient>
-    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
-      <path d="M24 0H0V24" fill="none"
-            stroke="#93c5fd" stroke-opacity=".035"/>
+    <pattern id="grid" width="22" height="22"
+             patternUnits="userSpaceOnUse">
+      <path d="M22 0H0V22"
+            fill="none" stroke="#191919" stroke-opacity=".06"/>
     </pattern>
 
     <style>
+      text {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .mono {
+        font-family: Consolas, 'Liberation Mono', monospace;
+      }
+
       .flow {
-        stroke-dasharray: 5 13;
-        animation: flow 3s linear infinite;
+        stroke-dasharray: 5 9;
+        animation: flow 4s linear infinite;
       }
-      .pulse {
-        transform-box: fill-box;
-        transform-origin: center;
-        animation: pulse 3.6s ease-in-out infinite;
+
+      .press {
+        animation: press 6s ease-in-out infinite;
       }
-      .node { animation: node 4s ease-in-out infinite; }
-      .second { animation-delay: 1.3s; }
-      .third { animation-delay: 2.6s; }
 
       @keyframes flow {
-        to { stroke-dashoffset: -72; }
+        to { stroke-dashoffset: -56; }
       }
-      @keyframes pulse {
-        0%,100% { transform: scale(.96); opacity: .45; }
-        50% { transform: scale(1.10); opacity: 1; }
-      }
-      @keyframes node {
-        0%,100% { opacity: .55; }
-        45% { opacity: 1; }
+
+      @keyframes press {
+        0%, 25%, 100% { transform: translate(0, 0); }
+        45%, 60% { transform: translate(3px, 3px); }
       }
 
       @media (prefers-reduced-motion: reduce) {
-        .flow,.pulse,.node { animation: none; }
+        .flow, .press { animation: none; }
       }
     </style>
   </defs>
 
-  <rect x="1" y="1" width="998" height="298" rx="16"
-        fill="url(#background)" stroke="#344155" stroke-width="2"/>
-  <rect x="12" y="12" width="976" height="276" rx="12"
+  <!-- Paper and hard shadow -->
+  <rect width="1000" height="300" fill="#f6f2e9"/>
+
+  <rect x="26" y="26" width="956" height="256"
+        fill="#191919"/>
+
+  <rect x="18" y="18" width="956" height="256"
+        fill="#d9f0e4" stroke="#191919" stroke-width="3.5"/>
+
+  <rect x="20" y="53" width="952" height="219"
         fill="url(#grid)"/>
 
-  <!-- Terminal title bar -->
-  <path d="M1 45H999" stroke="#344155"/>
-  <circle cx="25" cy="23" r="4.5" fill="#db8985"/>
-  <circle cx="42" cy="23" r="4.5" fill="#ddbd79"/>
-  <circle cx="59" cy="23" r="4.5" fill="#8bb7a0"/>
+  <!-- Header strip -->
+  <rect x="18" y="18" width="956" height="35"
+        fill="#191919"/>
 
-  <g font-family="Consolas, 'Liberation Mono', monospace">
-    <text x="83" y="28" fill="#a8b5c7" font-size="12">
-      projects / trinetra
-    </text>
-    <text x="968" y="28" text-anchor="end"
-          fill="#8291a7" font-size="11">01</text>
+  <text x="37" y="41"
+        class="mono" font-size="11" font-weight="700"
+        letter-spacing="1.1" fill="#ffffff">
+    TRINETRA / TEAM BAREMETAL
+  </text>
 
-    <!-- Project identity -->
-    <text x="34" y="88" fill="#93c5fd" font-size="12"
-          letter-spacing="2">TEAM BAREMETAL</text>
-    <text x="32" y="146" fill="#f1f5f9" font-size="51"
-          font-weight="700" letter-spacing="-2">TRINETRA</text>
+  <text x="954" y="41" text-anchor="end"
+        class="mono" font-size="10" font-weight="700"
+        fill="#d9f0e4">
+    PROJECT 01
+  </text>
 
-    <text x="34" y="180" fill="#b6c3d5" font-size="16">
-      One core. Three form factors.
-    </text>
-    <text x="34" y="211" fill="#8291a7" font-size="13">
-      A modular railway screening concept.
-    </text>
+  <!-- Project identity -->
+  <text x="38" y="136"
+        font-size="70" font-weight="900"
+        letter-spacing="-3.5" fill="#191919">
+    TRINETRA
+  </text>
 
-    <rect x="34" y="242" width="167" height="27" rx="6"
-          fill="#213347" stroke="#38536c"/>
-    <text x="48" y="260" fill="#bae6fd" font-size="11">
-      CONCEPT + SIMULATION
-    </text>
+  <text x="42" y="174"
+        class="mono" font-size="16" font-weight="700"
+        fill="#191919">
+    ONE CORE. THREE FORM FACTORS.
+  </text>
+
+  <text x="42" y="204"
+        font-size="15" fill="#314c3e">
+    A modular railway screening concept.
+  </text>
+
+  <!-- Status label -->
+  <rect x="46" y="231" width="226" height="27"
+        fill="#191919"/>
+
+  <rect x="42" y="227" width="226" height="27"
+        fill="#ffe45b" stroke="#191919" stroke-width="2"/>
+
+  <text x="55" y="245"
+        class="mono" font-size="10" font-weight="700"
+        letter-spacing=".7" fill="#191919">
+    CONCEPT + SIMULATION
+  </text>
+
+  <!-- Architecture area -->
+  <path d="M614 73V254"
+        fill="none" stroke="#191919"
+        stroke-width="2" stroke-dasharray="3 7"/>
+
+  <!-- Proposed device connections -->
+  <g fill="none" stroke="#789d89" stroke-width="2">
+    <path d="M773 143L706 102"/>
+    <path d="M809 143L881 102"/>
+    <path d="M791 174V221"/>
   </g>
 
-  <!-- Sensor architecture illustration -->
-  <circle cx="759" cy="166" r="119" fill="url(#halo)"/>
-
-  <g fill="none" stroke="#34465c" stroke-width="2">
-    <path d="M752 160L645 110"/>
-    <path d="M772 160L886 110"/>
-    <path d="M761 178V229"/>
+  <g class="flow" fill="none"
+     stroke="#191919" stroke-width="2.5">
+    <path d="M773 143L706 102"/>
+    <path d="M809 143L881 102"/>
+    <path d="M791 174V221"/>
   </g>
 
-  <g class="flow" fill="none" stroke="#93c5fd" stroke-width="2">
-    <path d="M752 160L645 110"/>
-    <path d="M772 160L886 110"/>
-    <path d="M761 178V229"/>
-  </g>
+  <!-- Mobile robot -->
+  <g transform="translate(692 94)"
+     stroke="#191919" stroke-width="2.5">
+    <path d="M0-13V-23M-6-23H6" fill="none"/>
 
-  <!-- Shared core -->
-  <circle class="pulse" cx="761" cy="164" r="40"
-          fill="none" stroke="#7dd3fc" stroke-width="1.5"/>
-  <rect x="735" y="138" width="52" height="52" rx="13"
-        fill="#20364b" stroke="#93c5fd" stroke-width="1.5"/>
-  <rect x="749" y="152" width="24" height="24" rx="5"
-        fill="#93c5fd" fill-opacity=".12" stroke="#bae6fd"/>
+    <rect x="-25" y="-12" width="50" height="24"
+          fill="#fffaf0"/>
 
-  <g stroke="#bae6fd" stroke-width="1.5">
-    <path d="M755 145V151M767 145V151M755 177V183M767 177V183"/>
-    <path d="M742 158H748M742 170H748M774 158H780M774 170H780"/>
-  </g>
+    <circle cx="-16" cy="16" r="7" fill="#191919"/>
+    <circle cx="16" cy="16" r="7" fill="#191919"/>
 
-  <!-- Robot -->
-  <g class="node" stroke="#b6d9f4" stroke-width="2" fill="#192635">
-    <rect x="600" y="75" width="63" height="31" rx="9"/>
-    <circle cx="612" cy="111" r="9"/>
-    <circle cx="651" cy="111" r="9"/>
-    <path d="M631 75V62M624 62H638" fill="none"/>
-    <circle cx="631" cy="87" r="4" fill="#93c5fd" stroke="none"/>
+    <rect x="-5" y="-5" width="10" height="8"
+          fill="#ffe45b" stroke-width="2"/>
   </g>
 
   <!-- Fixed node -->
-  <g class="node second" stroke="#b6d9f4" stroke-width="2" fill="none">
-    <rect x="870" y="73" width="34" height="43" rx="7" fill="#192635"/>
-    <path d="M887 73V60M881 116V126M893 116V126M875 126H899"/>
-    <path d="M876 61Q887 49 898 61" stroke-opacity=".5"/>
-    <circle cx="887" cy="88" r="4" fill="#93c5fd" stroke="none"/>
-    <path d="M880 103H894"/>
+  <g transform="translate(896 94)"
+     stroke="#191919" stroke-width="2.5">
+    <rect x="-13" y="-18" width="26" height="35"
+          fill="#fffaf0"/>
+
+    <path d="M0-18V-27M-7 17V24M7 17V24M-17 24H17"
+          fill="none"/>
+
+    <rect x="-5" y="-10" width="10" height="9"
+          fill="#ffe45b" stroke-width="2"/>
+
+    <path d="M-6 8H6" fill="none"/>
+  </g>
+
+  <!-- Shared sensor core -->
+  <g transform="translate(791 153)">
+    <rect x="-20" y="-20" width="46" height="46"
+          fill="#191919"/>
+
+    <g class="press">
+      <rect x="-25" y="-25" width="46" height="46"
+            fill="#ffe45b" stroke="#191919" stroke-width="3"/>
+
+      <rect x="-12" y="-12" width="20" height="20"
+            fill="#191919"/>
+
+      <g stroke="#191919" stroke-width="2">
+        <path d="M-8-19V-13M3-19V-13M-8 9V15M3 9V15"/>
+        <path d="M-19-8H-13M-19 3H-13M9-8H15M9 3H15"/>
+      </g>
+    </g>
   </g>
 
   <!-- Handheld -->
-  <g class="node third" stroke="#b6d9f4" stroke-width="2">
-    <rect x="745" y="225" width="32" height="42" rx="7" fill="#192635"/>
-    <rect x="751" y="232" width="20" height="17" rx="3"
-          fill="#93c5fd" fill-opacity=".15"/>
-    <path d="M758 257H764" fill="none"/>
+  <g transform="translate(791 237)"
+     stroke="#191919" stroke-width="2.5">
+    <rect x="-12" y="-18" width="24" height="35"
+          fill="#fffaf0"/>
+
+    <rect x="-7" y="-12" width="14" height="15"
+          fill="#ffe45b" stroke-width="2"/>
+
+    <path d="M-3 10H3" fill="none"/>
   </g>
 
-  <g font-family="Consolas, monospace" font-size="10"
-     fill="#9cacc0" text-anchor="middle">
-    <text x="632" y="140">ROBOT</text>
-    <text x="887" y="146">FIXED NODE</text>
-    <text x="761" y="284">HANDHELD</text>
+  <!-- Device captions -->
+  <g class="mono" font-size="9" font-weight="700"
+     fill="#191919" text-anchor="middle">
+    <text x="692" y="134">ROBOT</text>
+    <text x="896" y="137">FIXED NODE</text>
+    <text x="838" y="197">SENSOR CORE</text>
+    <text x="849" y="246">HANDHELD</text>
   </g>
 </svg>
